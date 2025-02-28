@@ -43,10 +43,10 @@ docker exec -it fake-news-detection-elasticsearch curl -X PUT "http://localhost:
 ### 5. Configura Elasticsearch
 ```sh
 Invoke-RestMethod -Uri "http://localhost:9200/_settings" -Method Put -Headers @{"Content-Type"="application/json"} -Body '{"index": {"number_of_replicas": 0}}'
+```
 
 oppure
 
-```
 ```sh
 curl -X PUT "http://localhost:9200/_settings" -H "Content-Type: application/json" -d '{"index": {"number_of_replicas": 0}}'
 ```
