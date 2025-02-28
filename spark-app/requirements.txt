@@ -1,0 +1,7 @@
+pyspark==3.5.0
+spark-nlp==5.5.3
+kafka-python==2.0.2
+elasticsearch==8.14.0
+requests
+numpy
+py4j

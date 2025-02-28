@@ -1,0 +1,125 @@
+version: '3.8'
+
+services:
+  zookeeper:
+    image: wurstmeister/zookeeper:latest
+    container_name: fake-news-detection-zookeeper
+    restart: always
+    environment:
+      ZOOKEEPER_CLIENT_PORT: 2181
+    ports:
+      - "2181:2181"
+
+  kafka:
+    image: wurstmeister/kafka:latest
+    container_name: fake-news-detection-kafka
+    restart: always
+    depends_on:
+      - zookeeper
+    environment:
+      KAFKA_BROKER_ID: 1
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:9092
+      KAFKA_LISTENERS: PLAINTEXT://0.0.0.0:9092
+      KAFKA_LOG_RETENTION_HOURS: 168
+      KAFKA_LOG_SEGMENT_BYTES: 1073741824
+      KAFKA_MESSAGE_MAX_BYTES: 200000000
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+    ports:
+      - "9092:9092"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:8.14.1
+    container_name: fake-news-detection-elasticsearch
+    restart: always
+    environment:
+      - discovery.type=single-node
+      - xpack.security.enabled=false
+    ports:
+      - "9200:9200" 
+      - "9300:9300"
+    mem_limit: 1 GB
+    volumes:
+      - "elastic_data:/usr/share/elasticsearch/data"
+
+  kibana:
+    image: docker.elastic.co/kibana/kibana:8.14.1
+    container_name: fake-news-detection-kibana
+    restart: always
+    depends_on:
+      - elasticsearch
+    ports:
+      - "5601:5601"
+
+  logstash:
+    image: docker.elastic.co/logstash/logstash:8.14.1
+    container_name: fake-news-detection-logstash
+    restart: always
+    depends_on:
+      - kafka
+      - elasticsearch
+    volumes:
+      - ./logstash.conf:/usr/share/logstash/pipeline/logstash.conf
+    ports:
+      - "5044:5044"
+      - "9600:9600"
+    environment:
+      - LOG_LEVEL=debug
+
+  spark:
+    image: bitnami/spark:latest
+    container_name: fake-news-detection-spark
+    restart: always
+    depends_on:
+      - kafka
+    ports:
+      - "4040:4040"
+    volumes:
+      - ./spark-app:/app
+    working_dir: /app
+
+  spark-fake-news-consumer:
+    build:
+      context: ./spark-app
+      dockerfile: Dockerfile
+    container_name: fake-news-detection-spark-fake-news-consumer
+    restart: always
+    depends_on:
+      - kafka
+      - elasticsearch
+    environment:
+      - SPARK_SUBMIT_OPTIONS="--packages org.apache.spark:spark-sql-kafka-0-10_2.12:3.5.0,org.elasticsearch:elasticsearch-spark-30_2.12:8.14.1"
+    command: ["bash", "-c", "/app/wait-for-services.sh && python spark_fake_news_consumer.py"]
+
+  spark-topic-modeling-consumer:
+    build:
+      context: ./spark-app
+      dockerfile: Dockerfile
+    container_name: fake-news-detection-spark-topic-modeling-consumer
+    restart: always
+    depends_on:
+      - kafka
+      - elasticsearch
+    environment:
+      - SPARK_SUBMIT_OPTIONS="--packages org.apache.spark:spark-sql-kafka-0-10_2.12:3.5.0,org.elasticsearch:elasticsearch-spark-30_2.12:8.14.1"
+    command: ["bash", "-c", "/app/wait-for-services.sh && python spark_topic_modeling_consumer.py"]
+
+  flask-app:
+    image: python:3.8-slim
+    container_name: fake-news-detection-flask-app
+    restart: always
+    depends_on:
+      - kafka
+      - logstash
+    volumes:
+      - ./flask-app:/app
+    working_dir: /app
+    ports:
+      - "8000:5000"
+    command: bash -c "pip install -r requirements.txt && python app.py"
+
+volumes:
+  elastic_data:
+    driver: local
