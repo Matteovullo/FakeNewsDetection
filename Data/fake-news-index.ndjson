@@ -1,0 +1,34 @@
+{"index": {"_index": "fake-news-index", "_id": "Microwaving food causes cancer"}}
+{"title": "Microwaving food causes cancer", "content": "Microwaved foods lead to a higher percentage of cancerous cells in the bloodstream.", "fake_news_rating": "False. There is no evidence that microwaved foods cause cancer or increase cancerous cells."}
+{"index": {"_index": "fake-news-index", "_id": "Vaccines contain microchips to track people"}}
+{"title": "Vaccines contain microchips to track people", "content": "\u201cAnother Conspiracy Proven True!\u201d referring to 2018 remarks by Pfizer CEO and claims about microchips in COVID-19 vaccines.", "fake_news_rating": "False"}
+{"index": {"_index": "fake-news-index", "_id": "Drinking bleach cures COVID-19"}}
+{"title": "Drinking bleach cures COVID-19", "content": "\u201cChina has also made it clear more than once that the Wuhan Institute of Virology has never engaged in gain-of-function studies of coronavirus.\u201d", "fake_news_rating": "False."}
+{"index": {"_index": "fake-news-index", "_id": "Covid laboratory"}}
+{"title": "Covid laboratory", "content": "\u201cChina has also made it clear more than once that the Wuhan Institute of Virology has never engaged in gain-of-function studies of coronavirus.\u201d", "fake_news_rating": "Misleading"}
+{"index": {"_index": "fake-news-index", "_id": "Vaccines cause autism"}}
+{"title": "Vaccines cause autism", "content": "\u201cAnother Conspiracy Proven True!\u201d referring to 2018 remarks by Pfizer CEO and claims about microchips in COVID-19 vaccines.", "fake_news_rating": "Flawed Paper"}
+{"index": {"_index": "fake-news-index", "_id": "Climate change"}}
+{"title": "Climate change", "content": "Postarea care sugereaz\u0103 o contradic\u021bie \u00eentre un eveniment meteorologic local \u0219i discu\u021biile despre schimb\u0103rile climatice globale", "fake_news_rating": "FALS"}
+{"index": {"_index": "fake-news-index", "_id": "The Earth is flat"}}
+{"title": "The Earth is flat", "content": "The Earth is flat.", "fake_news_rating": "We have abundant evidence going back thousands of years that the Earth is roughly spherical."}
+{"index": {"_index": "fake-news-index", "_id": " The Earth is flat"}}
+{"title": " The Earth is flat", "content": "The Earth is flat.", "fake_news_rating": "We have abundant evidence going back thousands of years that the Earth is roughly spherical."}
+{"index": {"_index": "fake-news-index", "_id": "Trump death"}}
+{"title": "Trump death", "content": "CNN reported Donald Trump died on Nov. 1.", "fake_news_rating": "Pants on Fire"}
+{"index": {"_index": "fake-news-index", "_id": "Comet will hit Earth next year"}}
+{"title": "Comet will hit Earth next year", "content": "The Earth is flat.", "fake_news_rating": "False"}
+{"index": {"_index": "fake-news-index", "_id": "Donald Trump won the 2020 election but it was stolen"}}
+{"title": "Donald Trump won the 2020 election but it was stolen", "content": "CNN reported Donald Trump died on Nov. 1.", "fake_news_rating": "These remarks, based on the claim from an election worker, and other similar allegations were rejected in a ruling on 13 November, with the judge deciding they weren't credible."}
+{"index": {"_index": "fake-news-index", "_id": "Trump banned all Muslims from entering the US"}}
+{"title": "Trump banned all Muslims from entering the US", "content": "CNN reported Donald Trump died on Nov. 1.", "fake_news_rating": "Trump's Quote, Not Reality"}
+{"index": {"_index": "fake-news-index", "_id": "COVID-19 was created in a lab as a bioweapon"}}
+{"title": "COVID-19 was created in a lab as a bioweapon", "content": "\u201cChina has also made it clear more than once that the Wuhan Institute of Virology has never engaged in gain-of-function studies of coronavirus.\u201d", "fake_news_rating": "False"}
+{"index": {"_index": "fake-news-index", "_id": "v"}}
+{"title": "v", "content": "\"All legal scholars, both sides, wanted and in fact demanded\" that Roe v. Wade \"be ended.\"", "fake_news_rating": "False"}
+{"index": {"_index": "fake-news-index", "_id": "tesla cars can fly"}}
+{"title": "tesla cars can fly", "content": "Elon Musk is \u201cfinally releasing his first flying car today.\u201d", "fake_news_rating": "False"}
+{"index": {"_index": "fake-news-index", "_id": "Moon landing was faked by NASA"}}
+{"title": "Moon landing was faked by NASA", "content": "CNN reported Donald Trump died on Nov. 1.", "fake_news_rating": "Missing Context"}
+{"index": {"_index": "fake-news-index", "_id": "Obama is secretly running for president again"}}
+{"title": "Obama is secretly running for president again", "content": "The Earth is flat.", "fake_news_rating": "Unknown"}

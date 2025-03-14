@@ -1,0 +1,465 @@
+{
+  "id": "FnZvcDRWZ1NTUi1TbzF1M05iV1BuY2ccTDROQmtLX1JRNENzM1UyTXhFSmg5Zzo0MzEwOA==",
+  "is_partial": false,
+  "is_running": false,
+  "start_time_in_millis": 1741949861906,
+  "expiration_time_in_millis": 1741949921906,
+  "completion_time_in_millis": 1741949861926,
+  "response": {
+    "took": 20,
+    "timed_out": false,
+    "_shards": {
+      "total": 1,
+      "successful": 1,
+      "skipped": 0,
+      "failed": 0
+    },
+    "hits": {
+      "max_score": 1,
+      "hits": [
+        {
+          "_index": "fake-news-index",
+          "_id": "Microwaving food causes cancer",
+          "_version": 2,
+          "_score": 1,
+          "fields": {
+            "title.keyword": [
+              "Microwaving food causes cancer"
+            ],
+            "fake_news_rating.keyword": [
+              "False. There is no evidence that microwaved foods cause cancer or increase cancerous cells."
+            ],
+            "content.keyword": [
+              "Microwaved foods lead to a higher percentage of cancerous cells in the bloodstream."
+            ],
+            "fake_news_rating": [
+              "False. There is no evidence that microwaved foods cause cancer or increase cancerous cells."
+            ],
+            "title": [
+              "Microwaving food causes cancer"
+            ],
+            "content": [
+              "Microwaved foods lead to a higher percentage of cancerous cells in the bloodstream."
+            ]
+          }
+        },
+        {
+          "_index": "fake-news-index",
+          "_id": "Vaccines contain microchips to track people",
+          "_version": 2,
+          "_score": 1,
+          "fields": {
+            "title.keyword": [
+              "Vaccines contain microchips to track people"
+            ],
+            "fake_news_rating.keyword": [
+              "False"
+            ],
+            "content.keyword": [
+              "“Another Conspiracy Proven True!” referring to 2018 remarks by Pfizer CEO and claims about microchips in COVID-19 vaccines."
+            ],
+            "fake_news_rating": [
+              "False"
+            ],
+            "title": [
+              "Vaccines contain microchips to track people"
+            ],
+            "content": [
+              "“Another Conspiracy Proven True!” referring to 2018 remarks by Pfizer CEO and claims about microchips in COVID-19 vaccines."
+            ]
+          }
+        },
+        {
+          "_index": "fake-news-index",
+          "_id": "Drinking bleach cures COVID-19",
+          "_version": 1,
+          "_score": 1,
+          "fields": {
+            "title.keyword": [
+              "Drinking bleach cures COVID-19"
+            ],
+            "fake_news_rating.keyword": [
+              "False."
+            ],
+            "content.keyword": [
+              "“China has also made it clear more than once that the Wuhan Institute of Virology has never engaged in gain-of-function studies of coronavirus.”"
+            ],
+            "fake_news_rating": [
+              "False."
+            ],
+            "title": [
+              "Drinking bleach cures COVID-19"
+            ],
+            "content": [
+              "“China has also made it clear more than once that the Wuhan Institute of Virology has never engaged in gain-of-function studies of coronavirus.”"
+            ]
+          }
+        },
+        {
+          "_index": "fake-news-index",
+          "_id": "Covid laboratory",
+          "_version": 2,
+          "_score": 1,
+          "fields": {
+            "title.keyword": [
+              "Covid laboratory"
+            ],
+            "fake_news_rating.keyword": [
+              "Misleading"
+            ],
+            "content.keyword": [
+              "“China has also made it clear more than once that the Wuhan Institute of Virology has never engaged in gain-of-function studies of coronavirus.”"
+            ],
+            "fake_news_rating": [
+              "Misleading"
+            ],
+            "title": [
+              "Covid laboratory"
+            ],
+            "content": [
+              "“China has also made it clear more than once that the Wuhan Institute of Virology has never engaged in gain-of-function studies of coronavirus.”"
+            ]
+          }
+        },
+        {
+          "_index": "fake-news-index",
+          "_id": "Vaccines cause autism",
+          "_version": 1,
+          "_score": 1,
+          "fields": {
+            "title.keyword": [
+              "Vaccines cause autism"
+            ],
+            "fake_news_rating.keyword": [
+              "Flawed Paper"
+            ],
+            "content.keyword": [
+              "“Another Conspiracy Proven True!” referring to 2018 remarks by Pfizer CEO and claims about microchips in COVID-19 vaccines."
+            ],
+            "fake_news_rating": [
+              "Flawed Paper"
+            ],
+            "title": [
+              "Vaccines cause autism"
+            ],
+            "content": [
+              "“Another Conspiracy Proven True!” referring to 2018 remarks by Pfizer CEO and claims about microchips in COVID-19 vaccines."
+            ]
+          }
+        },
+        {
+          "_index": "fake-news-index",
+          "_id": "Climate change",
+          "_version": 2,
+          "_score": 1,
+          "fields": {
+            "title.keyword": [
+              "Climate change"
+            ],
+            "fake_news_rating.keyword": [
+              "FALS"
+            ],
+            "content.keyword": [
+              "Postarea care sugerează o contradicție între un eveniment meteorologic local și discuțiile despre schimbările climatice globale"
+            ],
+            "fake_news_rating": [
+              "FALS"
+            ],
+            "title": [
+              "Climate change"
+            ],
+            "content": [
+              "Postarea care sugerează o contradicție între un eveniment meteorologic local și discuțiile despre schimbările climatice globale"
+            ]
+          }
+        },
+        {
+          "_index": "fake-news-index",
+          "_id": "The Earth is flat",
+          "_version": 1,
+          "_score": 1,
+          "fields": {
+            "title.keyword": [
+              "The Earth is flat"
+            ],
+            "fake_news_rating.keyword": [
+              "We have abundant evidence going back thousands of years that the Earth is roughly spherical."
+            ],
+            "content.keyword": [
+              "The Earth is flat."
+            ],
+            "fake_news_rating": [
+              "We have abundant evidence going back thousands of years that the Earth is roughly spherical."
+            ],
+            "title": [
+              "The Earth is flat"
+            ],
+            "content": [
+              "The Earth is flat."
+            ]
+          }
+        },
+        {
+          "_index": "fake-news-index",
+          "_id": " The Earth is flat",
+          "_version": 1,
+          "_score": 1,
+          "fields": {
+            "title.keyword": [
+              " The Earth is flat"
+            ],
+            "fake_news_rating.keyword": [
+              "We have abundant evidence going back thousands of years that the Earth is roughly spherical."
+            ],
+            "content.keyword": [
+              "The Earth is flat."
+            ],
+            "fake_news_rating": [
+              "We have abundant evidence going back thousands of years that the Earth is roughly spherical."
+            ],
+            "title": [
+              " The Earth is flat"
+            ],
+            "content": [
+              "The Earth is flat."
+            ]
+          }
+        },
+        {
+          "_index": "fake-news-index",
+          "_id": "Trump death",
+          "_version": 2,
+          "_score": 1,
+          "fields": {
+            "title.keyword": [
+              "Trump death"
+            ],
+            "fake_news_rating.keyword": [
+              "Pants on Fire"
+            ],
+            "content.keyword": [
+              "CNN reported Donald Trump died on Nov. 1."
+            ],
+            "fake_news_rating": [
+              "Pants on Fire"
+            ],
+            "title": [
+              "Trump death"
+            ],
+            "content": [
+              "CNN reported Donald Trump died on Nov. 1."
+            ]
+          }
+        },
+        {
+          "_index": "fake-news-index",
+          "_id": "Comet will hit Earth next year",
+          "_version": 1,
+          "_score": 1,
+          "fields": {
+            "title.keyword": [
+              "Comet will hit Earth next year"
+            ],
+            "fake_news_rating.keyword": [
+              "False"
+            ],
+            "content.keyword": [
+              "The Earth is flat."
+            ],
+            "fake_news_rating": [
+              "False"
+            ],
+            "title": [
+              "Comet will hit Earth next year"
+            ],
+            "content": [
+              "The Earth is flat."
+            ]
+          }
+        },
+        {
+          "_index": "fake-news-index",
+          "_id": "Donald Trump won the 2020 election but it was stolen",
+          "_version": 1,
+          "_score": 1,
+          "fields": {
+            "title.keyword": [
+              "Donald Trump won the 2020 election but it was stolen"
+            ],
+            "fake_news_rating.keyword": [
+              "These remarks, based on the claim from an election worker, and other similar allegations were rejected in a ruling on 13 November, with the judge deciding they weren't credible."
+            ],
+            "content.keyword": [
+              "CNN reported Donald Trump died on Nov. 1."
+            ],
+            "fake_news_rating": [
+              "These remarks, based on the claim from an election worker, and other similar allegations were rejected in a ruling on 13 November, with the judge deciding they weren't credible."
+            ],
+            "title": [
+              "Donald Trump won the 2020 election but it was stolen"
+            ],
+            "content": [
+              "CNN reported Donald Trump died on Nov. 1."
+            ]
+          }
+        },
+        {
+          "_index": "fake-news-index",
+          "_id": "Trump banned all Muslims from entering the US",
+          "_version": 1,
+          "_score": 1,
+          "fields": {
+            "title.keyword": [
+              "Trump banned all Muslims from entering the US"
+            ],
+            "fake_news_rating.keyword": [
+              "Trump's Quote, Not Reality"
+            ],
+            "content.keyword": [
+              "CNN reported Donald Trump died on Nov. 1."
+            ],
+            "fake_news_rating": [
+              "Trump's Quote, Not Reality"
+            ],
+            "title": [
+              "Trump banned all Muslims from entering the US"
+            ],
+            "content": [
+              "CNN reported Donald Trump died on Nov. 1."
+            ]
+          }
+        },
+        {
+          "_index": "fake-news-index",
+          "_id": "COVID-19 was created in a lab as a bioweapon",
+          "_version": 1,
+          "_score": 1,
+          "fields": {
+            "title.keyword": [
+              "COVID-19 was created in a lab as a bioweapon"
+            ],
+            "fake_news_rating.keyword": [
+              "False"
+            ],
+            "content.keyword": [
+              "“China has also made it clear more than once that the Wuhan Institute of Virology has never engaged in gain-of-function studies of coronavirus.”"
+            ],
+            "fake_news_rating": [
+              "False"
+            ],
+            "title": [
+              "COVID-19 was created in a lab as a bioweapon"
+            ],
+            "content": [
+              "“China has also made it clear more than once that the Wuhan Institute of Virology has never engaged in gain-of-function studies of coronavirus.”"
+            ]
+          }
+        },
+        {
+          "_index": "fake-news-index",
+          "_id": "v",
+          "_version": 2,
+          "_score": 1,
+          "fields": {
+            "title.keyword": [
+              "v"
+            ],
+            "fake_news_rating.keyword": [
+              "False"
+            ],
+            "content.keyword": [
+              "\"All legal scholars, both sides, wanted and in fact demanded\" that Roe v. Wade \"be ended.\""
+            ],
+            "fake_news_rating": [
+              "False"
+            ],
+            "title": [
+              "v"
+            ],
+            "content": [
+              "\"All legal scholars, both sides, wanted and in fact demanded\" that Roe v. Wade \"be ended.\""
+            ]
+          }
+        },
+        {
+          "_index": "fake-news-index",
+          "_id": "tesla cars can fly",
+          "_version": 2,
+          "_score": 1,
+          "fields": {
+            "title.keyword": [
+              "tesla cars can fly"
+            ],
+            "fake_news_rating.keyword": [
+              "False"
+            ],
+            "content.keyword": [
+              "Elon Musk is “finally releasing his first flying car today.”"
+            ],
+            "fake_news_rating": [
+              "False"
+            ],
+            "title": [
+              "tesla cars can fly"
+            ],
+            "content": [
+              "Elon Musk is “finally releasing his first flying car today.”"
+            ]
+          }
+        },
+        {
+          "_index": "fake-news-index",
+          "_id": "Moon landing was faked by NASA",
+          "_version": 1,
+          "_score": 1,
+          "fields": {
+            "title.keyword": [
+              "Moon landing was faked by NASA"
+            ],
+            "fake_news_rating.keyword": [
+              "Missing Context"
+            ],
+            "content.keyword": [
+              "CNN reported Donald Trump died on Nov. 1."
+            ],
+            "fake_news_rating": [
+              "Missing Context"
+            ],
+            "title": [
+              "Moon landing was faked by NASA"
+            ],
+            "content": [
+              "CNN reported Donald Trump died on Nov. 1."
+            ]
+          }
+        },
+        {
+          "_index": "fake-news-index",
+          "_id": "Obama is secretly running for president again",
+          "_version": 1,
+          "_score": 1,
+          "fields": {
+            "title.keyword": [
+              "Obama is secretly running for president again"
+            ],
+            "fake_news_rating.keyword": [
+              "Unknown"
+            ],
+            "content.keyword": [
+              "The Earth is flat."
+            ],
+            "fake_news_rating": [
+              "Unknown"
+            ],
+            "title": [
+              "Obama is secretly running for president again"
+            ],
+            "content": [
+              "The Earth is flat."
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

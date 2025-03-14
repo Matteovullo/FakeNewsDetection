@@ -1,0 +1,848 @@
+{
+  "id": "FkVZTVB3bXZ6VHlHZS1zNGY5VnFwckEcTDROQmtLX1JRNENzM1UyTXhFSmg5Zzo0MTUyNw==",
+  "is_partial": false,
+  "is_running": false,
+  "start_time_in_millis": 1741949754792,
+  "expiration_time_in_millis": 1741949814792,
+  "completion_time_in_millis": 1741949754804,
+  "response": {
+    "took": 12,
+    "timed_out": false,
+    "_shards": {
+      "total": 1,
+      "successful": 1,
+      "skipped": 0,
+      "failed": 0
+    },
+    "hits": {
+      "max_score": 1,
+      "hits": [
+        {
+          "_index": "news-topics-index",
+          "_id": "ZIkrlJUBzr7B0y-WEj-c",
+          "_version": 1,
+          "_score": 1,
+          "fields": {
+            "title.keyword": [
+              "Climate change"
+            ],
+            "content.keyword": [
+              "Postarea care sugerează o contradicție între un eveniment meteorologic local și discuțiile despre schimbările climatice globale"
+            ],
+            "bigrams": [
+              "Postarea care, care sugerează, sugerează o, o contradicție, contradicție între, între un, un eveniment, eveniment meteorologic, meteorologic local, local și, și discuțiile, discuțiile despre, despre schimbările, schimbările climatice, climatice globale"
+            ],
+            "title": [
+              "Climate change"
+            ],
+            "content": [
+              "Postarea care sugerează o contradicție între un eveniment meteorologic local și discuțiile despre schimbările climatice globale"
+            ],
+            "topicDistribution": [
+              0.012261078,
+              0.012265472,
+              0.0122831855,
+              0.012265698,
+              0.9509246
+            ],
+            "bigrams.keyword": [
+              "Postarea care, care sugerează, sugerează o, o contradicție, contradicție între, între un, un eveniment, eveniment meteorologic, meteorologic local, local și, și discuțiile, discuțiile despre, despre schimbările, schimbările climatice, climatice globale"
+            ]
+          }
+        },
+        {
+          "_index": "news-topics-index",
+          "_id": "ZYkslJUBzr7B0y-WJD9c",
+          "_version": 1,
+          "_score": 1,
+          "fields": {
+            "title.keyword": [
+              "Drinking bleach cures COVID-19"
+            ],
+            "content.keyword": [
+              "“China has also made it clear more than once that the Wuhan Institute of Virology has never engaged in gain-of-function studies of coronavirus.”"
+            ],
+            "bigrams": [
+              "China also, also make, make clear, clear Wuhan, Wuhan Institute, Institute Virology, Virology never, never engage, engage gainoffunction, gainoffunction study, study coronavirus"
+            ],
+            "title": [
+              "Drinking bleach cures COVID-19"
+            ],
+            "content": [
+              "“China has also made it clear more than once that the Wuhan Institute of Virology has never engaged in gain-of-function studies of coronavirus.”"
+            ],
+            "topicDistribution": [
+              0.0164597,
+              0.016456628,
+              0.9333583,
+              0.017266193,
+              0.016459163
+            ],
+            "bigrams.keyword": [
+              "China also, also make, make clear, clear Wuhan, Wuhan Institute, Institute Virology, Virology never, never engage, engage gainoffunction, gainoffunction study, study coronavirus"
+            ]
+          }
+        },
+        {
+          "_index": "news-topics-index",
+          "_id": "YYkplJUBzr7B0y-Wyj86",
+          "_version": 1,
+          "_score": 1,
+          "fields": {
+            "title.keyword": [
+              "Covid laboratory"
+            ],
+            "content.keyword": [
+              "“China has also made it clear more than once that the Wuhan Institute of Virology has never engaged in gain-of-function studies of coronavirus.”"
+            ],
+            "bigrams": [
+              "China also, also make, make clear, clear Wuhan, Wuhan Institute, Institute Virology, Virology never, never engage, engage gainoffunction, gainoffunction study, study coronavirus"
+            ],
+            "title": [
+              "Covid laboratory"
+            ],
+            "content": [
+              "“China has also made it clear more than once that the Wuhan Institute of Virology has never engaged in gain-of-function studies of coronavirus.”"
+            ],
+            "topicDistribution": [
+              0.0164597,
+              0.016456628,
+              0.9333583,
+              0.017266193,
+              0.016459163
+            ],
+            "bigrams.keyword": [
+              "China also, also make, make clear, clear Wuhan, Wuhan Institute, Institute Virology, Virology never, never engage, engage gainoffunction, gainoffunction study, study coronavirus"
+            ]
+          }
+        },
+        {
+          "_index": "news-topics-index",
+          "_id": "YokqlJUBzr7B0y-WVT_1",
+          "_version": 1,
+          "_score": 1,
+          "fields": {
+            "title.keyword": [
+              "Covid laboratory"
+            ],
+            "content.keyword": [
+              "“China has also made it clear more than once that the Wuhan Institute of Virology has never engaged in gain-of-function studies of coronavirus.”"
+            ],
+            "bigrams": [
+              "China also, also make, make clear, clear Wuhan, Wuhan Institute, Institute Virology, Virology never, never engage, engage gainoffunction, gainoffunction study, study coronavirus"
+            ],
+            "title": [
+              "Covid laboratory"
+            ],
+            "content": [
+              "“China has also made it clear more than once that the Wuhan Institute of Virology has never engaged in gain-of-function studies of coronavirus.”"
+            ],
+            "topicDistribution": [
+              0.0164597,
+              0.016456628,
+              0.9333583,
+              0.017266193,
+              0.016459163
+            ],
+            "bigrams.keyword": [
+              "China also, also make, make clear, clear Wuhan, Wuhan Institute, Institute Virology, Virology never, never engage, engage gainoffunction, gainoffunction study, study coronavirus"
+            ]
+          }
+        },
+        {
+          "_index": "news-topics-index",
+          "_id": "ZokslJUBzr7B0y-WxD_z",
+          "_version": 1,
+          "_score": 1,
+          "fields": {
+            "title.keyword": [
+              "Vaccines contain microchips to track people"
+            ],
+            "content.keyword": [
+              "“Another Conspiracy Proven True!” referring to 2018 remarks by Pfizer CEO and claims about microchips in COVID-19 vaccines."
+            ],
+            "bigrams": [
+              "Another Conspiracy, Conspiracy Proven, Proven True, True refer, refer remark, remark Pfizer, Pfizer CEO, CEO claim, claim microchip, microchip COVID, COVID vaccine"
+            ],
+            "title": [
+              "Vaccines contain microchips to track people"
+            ],
+            "content": [
+              "“Another Conspiracy Proven True!” referring to 2018 remarks by Pfizer CEO and claims about microchips in COVID-19 vaccines."
+            ],
+            "topicDistribution": [
+              0.0164597,
+              0.016456628,
+              0.9333583,
+              0.017266193,
+              0.016459163
+            ],
+            "bigrams.keyword": [
+              "Another Conspiracy, Conspiracy Proven, Proven True, True refer, refer remark, remark Pfizer, Pfizer CEO, CEO claim, claim microchip, microchip COVID, COVID vaccine"
+            ]
+          }
+        },
+        {
+          "_index": "news-topics-index",
+          "_id": "Z4ktlJUBzr7B0y-WGT8Q",
+          "_version": 1,
+          "_score": 1,
+          "fields": {
+            "title.keyword": [
+              "Vaccines contain microchips to track people"
+            ],
+            "content.keyword": [
+              "“Another Conspiracy Proven True!” referring to 2018 remarks by Pfizer CEO and claims about microchips in COVID-19 vaccines."
+            ],
+            "bigrams": [
+              "Another Conspiracy, Conspiracy Proven, Proven True, True refer, refer remark, remark Pfizer, Pfizer CEO, CEO claim, claim microchip, microchip COVID, COVID vaccine"
+            ],
+            "title": [
+              "Vaccines contain microchips to track people"
+            ],
+            "content": [
+              "“Another Conspiracy Proven True!” referring to 2018 remarks by Pfizer CEO and claims about microchips in COVID-19 vaccines."
+            ],
+            "topicDistribution": [
+              0.0164597,
+              0.016456628,
+              0.9333583,
+              0.017266193,
+              0.016459163
+            ],
+            "bigrams.keyword": [
+              "Another Conspiracy, Conspiracy Proven, Proven True, True refer, refer remark, remark Pfizer, Pfizer CEO, CEO claim, claim microchip, microchip COVID, COVID vaccine"
+            ]
+          }
+        },
+        {
+          "_index": "news-topics-index",
+          "_id": "XIkolJUBzr7B0y-W9T-H",
+          "_version": 1,
+          "_score": 1,
+          "fields": {
+            "title.keyword": [
+              "Trump death"
+            ],
+            "content.keyword": [
+              "CNN reported Donald Trump died on Nov. 1."
+            ],
+            "bigrams": [
+              "CNN report, report Donald, Donald Trump, Trump die, die Nov"
+            ],
+            "title": [
+              "Trump death"
+            ],
+            "content": [
+              "CNN reported Donald Trump died on Nov. 1."
+            ],
+            "topicDistribution": [
+              0.033115376,
+              0.03309335,
+              0.8666547,
+              0.03313723,
+              0.033999354
+            ],
+            "bigrams.keyword": [
+              "CNN report, report Donald, Donald Trump, Trump die, die Nov"
+            ]
+          }
+        },
+        {
+          "_index": "news-topics-index",
+          "_id": "XYkolJUBzr7B0y-W9T-H",
+          "_version": 1,
+          "_score": 1,
+          "fields": {
+            "title.keyword": [
+              "Trump death"
+            ],
+            "content.keyword": [
+              "CNN reported Donald Trump died on Nov. 1."
+            ],
+            "bigrams": [
+              "CNN report, report Donald, Donald Trump, Trump die, die Nov"
+            ],
+            "title": [
+              "Trump death"
+            ],
+            "content": [
+              "CNN reported Donald Trump died on Nov. 1."
+            ],
+            "topicDistribution": [
+              0.033115376,
+              0.03309335,
+              0.8666547,
+              0.03313723,
+              0.033999354
+            ],
+            "bigrams.keyword": [
+              "CNN report, report Donald, Donald Trump, Trump die, die Nov"
+            ]
+          }
+        },
+        {
+          "_index": "news-topics-index",
+          "_id": "XokolJUBzr7B0y-W9T-H",
+          "_version": 1,
+          "_score": 1,
+          "fields": {
+            "title.keyword": [
+              "Trump death"
+            ],
+            "content.keyword": [
+              "CNN reported Donald Trump died on Nov. 1."
+            ],
+            "bigrams": [
+              "CNN report, report Donald, Donald Trump, Trump die, die Nov"
+            ],
+            "title": [
+              "Trump death"
+            ],
+            "content": [
+              "CNN reported Donald Trump died on Nov. 1."
+            ],
+            "topicDistribution": [
+              0.033115376,
+              0.03309335,
+              0.8666547,
+              0.03313723,
+              0.033999354
+            ],
+            "bigrams.keyword": [
+              "CNN report, report Donald, Donald Trump, Trump die, die Nov"
+            ]
+          }
+        },
+        {
+          "_index": "news-topics-index",
+          "_id": "X4kolJUBzr7B0y-W9T-H",
+          "_version": 1,
+          "_score": 1,
+          "fields": {
+            "title.keyword": [
+              "The Earth is flat"
+            ],
+            "content.keyword": [
+              "The Earth is flat."
+            ],
+            "bigrams": [
+              "Earth flat"
+            ],
+            "title": [
+              "The Earth is flat"
+            ],
+            "content": [
+              "The Earth is flat."
+            ],
+            "topicDistribution": [
+              0.09962572,
+              0.100285046,
+              0.10736617,
+              0.100212775,
+              0.5925103
+            ],
+            "bigrams.keyword": [
+              "Earth flat"
+            ]
+          }
+        },
+        {
+          "_index": "news-topics-index",
+          "_id": "aIktlJUBzr7B0y-Wxj9C",
+          "_version": 1,
+          "_score": 1,
+          "fields": {
+            "title.keyword": [
+              "Donald Trump won the 2020 election but it was stolen"
+            ],
+            "content.keyword": [
+              "CNN reported Donald Trump died on Nov. 1."
+            ],
+            "bigrams": [
+              "CNN report, report Donald, Donald Trump, Trump die, die Nov"
+            ],
+            "title": [
+              "Donald Trump won the 2020 election but it was stolen"
+            ],
+            "content": [
+              "CNN reported Donald Trump died on Nov. 1."
+            ],
+            "topicDistribution": [
+              0.0333922,
+              0.03336323,
+              0.033305302,
+              0.8665384,
+              0.033400837
+            ],
+            "bigrams.keyword": [
+              "CNN report, report Donald, Donald Trump, Trump die, die Nov"
+            ]
+          }
+        },
+        {
+          "_index": "news-topics-index",
+          "_id": "aYktlJUBzr7B0y-W-D9w",
+          "_version": 1,
+          "_score": 1,
+          "fields": {
+            "title.keyword": [
+              "Comet will hit Earth next year"
+            ],
+            "content.keyword": [
+              "The Earth is flat."
+            ],
+            "bigrams": [
+              "Earth flat"
+            ],
+            "title": [
+              "Comet will hit Earth next year"
+            ],
+            "content": [
+              "The Earth is flat."
+            ],
+            "topicDistribution": [
+              0.103141405,
+              0.10313253,
+              0.1064574,
+              0.10669853,
+              0.58057016
+            ],
+            "bigrams.keyword": [
+              "Earth flat"
+            ]
+          }
+        },
+        {
+          "_index": "news-topics-index",
+          "_id": "YIkplJUBzr7B0y-WXT_V",
+          "_version": 1,
+          "_score": 1,
+          "fields": {
+            "title.keyword": [
+              " The Earth is flat"
+            ],
+            "content.keyword": [
+              "The Earth is flat."
+            ],
+            "bigrams": [
+              "Earth flat"
+            ],
+            "title": [
+              " The Earth is flat"
+            ],
+            "content": [
+              "The Earth is flat."
+            ],
+            "topicDistribution": [
+              0.103141405,
+              0.10313253,
+              0.1064574,
+              0.10669853,
+              0.58057016
+            ],
+            "bigrams.keyword": [
+              "Earth flat"
+            ]
+          }
+        },
+        {
+          "_index": "news-topics-index",
+          "_id": "Y4kqlJUBzr7B0y-WsT9n",
+          "_version": 1,
+          "_score": 1,
+          "fields": {
+            "title.keyword": [
+              "Climate change"
+            ],
+            "content.keyword": [
+              "Postarea care sugerează o contradicție între un eveniment meteorologic local și discuțiile despre schimbările climatice globale"
+            ],
+            "bigrams": [
+              "Postarea care, care sugerează, sugerează o, o contradicție, contradicție între, între un, un eveniment, eveniment meteorologic, meteorologic local, local și, și discuțiile, discuțiile despre, despre schimbările, schimbările climatice, climatice globale"
+            ],
+            "title": [
+              "Climate change"
+            ],
+            "content": [
+              "Postarea care sugerează o contradicție între un eveniment meteorologic local și discuțiile despre schimbările climatice globale"
+            ],
+            "topicDistribution": [
+              0.012261078,
+              0.012265472,
+              0.0122831855,
+              0.012265698,
+              0.9509246
+            ],
+            "bigrams.keyword": [
+              "Postarea care, care sugerează, sugerează o, o contradicție, contradicție între, între un, un eveniment, eveniment meteorologic, meteorologic local, local și, și discuțiile, discuțiile despre, despre schimbările, schimbările climatice, climatice globale"
+            ]
+          }
+        },
+        {
+          "_index": "news-topics-index",
+          "_id": "bolBlJUBzr7B0y-W3T-y",
+          "_version": 1,
+          "_score": 1,
+          "fields": {
+            "title.keyword": [
+              "COVID-19 was created in a lab as a bioweapon"
+            ],
+            "content.keyword": [
+              "“China has also made it clear more than once that the Wuhan Institute of Virology has never engaged in gain-of-function studies of coronavirus.”"
+            ],
+            "bigrams": [
+              "China also, also make, make clear, clear Wuhan, Wuhan Institute, Institute Virology, Virology never, never engage, engage gainoffunction, gainoffunction study, study coronavirus"
+            ],
+            "title": [
+              "COVID-19 was created in a lab as a bioweapon"
+            ],
+            "content": [
+              "“China has also made it clear more than once that the Wuhan Institute of Virology has never engaged in gain-of-function studies of coronavirus.”"
+            ],
+            "topicDistribution": [
+              0.0164597,
+              0.016456628,
+              0.9333583,
+              0.017266193,
+              0.016459163
+            ],
+            "bigrams.keyword": [
+              "China also, also make, make clear, clear Wuhan, Wuhan Institute, Institute Virology, Virology never, never engage, engage gainoffunction, gainoffunction study, study coronavirus"
+            ]
+          }
+        },
+        {
+          "_index": "news-topics-index",
+          "_id": "cIlFlJUBzr7B0y-WCj_k",
+          "_version": 1,
+          "_score": 1,
+          "fields": {
+            "title.keyword": [
+              "v"
+            ],
+            "content.keyword": [
+              "\"All legal scholars, both sides, wanted and in fact demanded\" that Roe v. Wade \"be ended.\""
+            ],
+            "bigrams": [
+              "legal scholar, scholar side, side want, want fact, fact demand, demand Roe, Roe v, v Wade, Wade end"
+            ],
+            "title": [
+              "v"
+            ],
+            "content": [
+              "\"All legal scholars, both sides, wanted and in fact demanded\" that Roe v. Wade \"be ended.\""
+            ],
+            "topicDistribution": [
+              0.019719763,
+              0.019740358,
+              0.019777503,
+              0.019756362,
+              0.921006
+            ],
+            "bigrams.keyword": [
+              "legal scholar, scholar side, side want, want fact, fact demand, demand Roe, Roe v, v Wade, Wade end"
+            ]
+          }
+        },
+        {
+          "_index": "news-topics-index",
+          "_id": "cYlFlJUBzr7B0y-WCj_l",
+          "_version": 1,
+          "_score": 1,
+          "fields": {
+            "title.keyword": [
+              "tesla cars can fly"
+            ],
+            "content.keyword": [
+              "Elon Musk is “finally releasing his first flying car today.”"
+            ],
+            "bigrams": [
+              "Elon Musk, Musk finally, finally release, release first, first fly, fly car, car today"
+            ],
+            "title": [
+              "tesla cars can fly"
+            ],
+            "content": [
+              "Elon Musk is “finally releasing his first flying car today.”"
+            ],
+            "topicDistribution": [
+              0.89851004,
+              0.024818724,
+              0.024753405,
+              0.024811795,
+              0.027106058
+            ],
+            "bigrams.keyword": [
+              "Elon Musk, Musk finally, finally release, release first, first fly, fly car, car today"
+            ]
+          }
+        },
+        {
+          "_index": "news-topics-index",
+          "_id": "bIlBlJUBzr7B0y-WYj_c",
+          "_version": 1,
+          "_score": 1,
+          "fields": {
+            "title.keyword": [
+              "Vaccines cause autism"
+            ],
+            "content.keyword": [
+              "“Another Conspiracy Proven True!” referring to 2018 remarks by Pfizer CEO and claims about microchips in COVID-19 vaccines."
+            ],
+            "bigrams": [
+              "Another Conspiracy, Conspiracy Proven, Proven True, True refer, refer remark, remark Pfizer, Pfizer CEO, CEO claim, claim microchip, microchip COVID, COVID vaccine"
+            ],
+            "title": [
+              "Vaccines cause autism"
+            ],
+            "content": [
+              "“Another Conspiracy Proven True!” referring to 2018 remarks by Pfizer CEO and claims about microchips in COVID-19 vaccines."
+            ],
+            "topicDistribution": [
+              0.0164597,
+              0.016456628,
+              0.9333583,
+              0.017266193,
+              0.016459163
+            ],
+            "bigrams.keyword": [
+              "Another Conspiracy, Conspiracy Proven, Proven True, True refer, refer remark, remark Pfizer, Pfizer CEO, CEO claim, claim microchip, microchip COVID, COVID vaccine"
+            ]
+          }
+        },
+        {
+          "_index": "news-topics-index",
+          "_id": "aokulJUBzr7B0y-WZj-Q",
+          "_version": 1,
+          "_score": 1,
+          "fields": {
+            "title.keyword": [
+              "Microwaving food causes cancer"
+            ],
+            "content.keyword": [
+              "Microwaved foods lead to a higher percentage of cancerous cells in the bloodstream."
+            ],
+            "bigrams": [
+              "Microwaved food, food lead, lead high, high percentage, percentage cancerous, cancerous cell, cell bloodstream"
+            ],
+            "title": [
+              "Microwaving food causes cancer"
+            ],
+            "content": [
+              "Microwaved foods lead to a higher percentage of cancerous cells in the bloodstream."
+            ],
+            "topicDistribution": [
+              0.024898807,
+              0.0248408,
+              0.024893735,
+              0.024840957,
+              0.9005257
+            ],
+            "bigrams.keyword": [
+              "Microwaved food, food lead, lead high, high percentage, percentage cancerous, cancerous cell, cell bloodstream"
+            ]
+          }
+        },
+        {
+          "_index": "news-topics-index",
+          "_id": "a4kvlJUBzr7B0y-W9D_h",
+          "_version": 1,
+          "_score": 1,
+          "fields": {
+            "title.keyword": [
+              "Microwaving food causes cancer"
+            ],
+            "content.keyword": [
+              "Microwaved foods lead to a higher percentage of cancerous cells in the bloodstream."
+            ],
+            "bigrams": [
+              "Microwaved food, food lead, lead high, high percentage, percentage cancerous, cancerous cell, cell bloodstream"
+            ],
+            "title": [
+              "Microwaving food causes cancer"
+            ],
+            "content": [
+              "Microwaved foods lead to a higher percentage of cancerous cells in the bloodstream."
+            ],
+            "topicDistribution": [
+              0.024898807,
+              0.0248408,
+              0.024893735,
+              0.024840957,
+              0.9005257
+            ],
+            "bigrams.keyword": [
+              "Microwaved food, food lead, lead high, high percentage, percentage cancerous, cancerous cell, cell bloodstream"
+            ]
+          }
+        },
+        {
+          "_index": "news-topics-index",
+          "_id": "b4lElJUBzr7B0y-WtD-W",
+          "_version": 1,
+          "_score": 1,
+          "fields": {
+            "title.keyword": [
+              "v"
+            ],
+            "content.keyword": [
+              "\"All legal scholars, both sides, wanted and in fact demanded\" that Roe v. Wade \"be ended.\""
+            ],
+            "bigrams": [
+              "legal scholar, scholar side, side want, want fact, fact demand, demand Roe, Roe v, v Wade, Wade end"
+            ],
+            "title": [
+              "v"
+            ],
+            "content": [
+              "\"All legal scholars, both sides, wanted and in fact demanded\" that Roe v. Wade \"be ended.\""
+            ],
+            "topicDistribution": [
+              0.019814553,
+              0.01979865,
+              0.019806076,
+              0.9207326,
+              0.01984809
+            ],
+            "bigrams.keyword": [
+              "legal scholar, scholar side, side want, want fact, fact demand, demand Roe, Roe v, v Wade, Wade end"
+            ]
+          }
+        },
+        {
+          "_index": "news-topics-index",
+          "_id": "colFlJUBzr7B0y-WwD9x",
+          "_version": 1,
+          "_score": 1,
+          "fields": {
+            "title.keyword": [
+              "tesla cars can fly"
+            ],
+            "content.keyword": [
+              "Elon Musk is “finally releasing his first flying car today.”"
+            ],
+            "bigrams": [
+              "Elon Musk, Musk finally, finally release, release first, first fly, fly car, car today"
+            ],
+            "title": [
+              "tesla cars can fly"
+            ],
+            "content": [
+              "Elon Musk is “finally releasing his first flying car today.”"
+            ],
+            "topicDistribution": [
+              0.024898807,
+              0.0248408,
+              0.024893735,
+              0.024840957,
+              0.9005257
+            ],
+            "bigrams.keyword": [
+              "Elon Musk, Musk finally, finally release, release first, first fly, fly car, car today"
+            ]
+          }
+        },
+        {
+          "_index": "news-topics-index",
+          "_id": "bYlBlJUBzr7B0y-Wiz_a",
+          "_version": 1,
+          "_score": 1,
+          "fields": {
+            "title.keyword": [
+              "Trump banned all Muslims from entering the US"
+            ],
+            "content.keyword": [
+              "CNN reported Donald Trump died on Nov. 1."
+            ],
+            "bigrams": [
+              "CNN report, report Donald, Donald Trump, Trump die, die Nov"
+            ],
+            "title": [
+              "Trump banned all Muslims from entering the US"
+            ],
+            "content": [
+              "CNN reported Donald Trump died on Nov. 1."
+            ],
+            "topicDistribution": [
+              0.0333922,
+              0.03336323,
+              0.033305302,
+              0.8665384,
+              0.033400837
+            ],
+            "bigrams.keyword": [
+              "CNN report, report Donald, Donald Trump, Trump die, die Nov"
+            ]
+          }
+        },
+        {
+          "_index": "news-topics-index",
+          "_id": "c4lIlJUBzr7B0y-Wsz81",
+          "_version": 1,
+          "_score": 1,
+          "fields": {
+            "title.keyword": [
+              "Moon landing was faked by NASA"
+            ],
+            "content.keyword": [
+              "CNN reported Donald Trump died on Nov. 1."
+            ],
+            "bigrams": [
+              "CNN report, report Donald, Donald Trump, Trump die, die Nov"
+            ],
+            "title": [
+              "Moon landing was faked by NASA"
+            ],
+            "content": [
+              "CNN reported Donald Trump died on Nov. 1."
+            ],
+            "topicDistribution": [
+              0.0333922,
+              0.03336323,
+              0.033305302,
+              0.8665384,
+              0.033400837
+            ],
+            "bigrams.keyword": [
+              "CNN report, report Donald, Donald Trump, Trump die, die Nov"
+            ]
+          }
+        },
+        {
+          "_index": "news-topics-index",
+          "_id": "dIlJlJUBzr7B0y-WGT8z",
+          "_version": 1,
+          "_score": 1,
+          "fields": {
+            "title.keyword": [
+              "Obama is secretly running for president again"
+            ],
+            "content.keyword": [
+              "The Earth is flat."
+            ],
+            "bigrams": [
+              "Earth flat"
+            ],
+            "title": [
+              "Obama is secretly running for president again"
+            ],
+            "content": [
+              "The Earth is flat."
+            ],
+            "topicDistribution": [
+              0.103141405,
+              0.10313253,
+              0.1064574,
+              0.10669853,
+              0.58057016
+            ],
+            "bigrams.keyword": [
+              "Earth flat"
+            ]
+          }
+        }
+      ]
+    }
+  }
+}
