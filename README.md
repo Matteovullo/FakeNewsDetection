@@ -56,6 +56,15 @@ curl -X PUT "http://localhost:9200/_settings" -H "Content-Type: application/json
 - **Kibana**: `http://localhost:5601`
 - **Elasticsearch**: `http://localhost:9200`
 
+## Dashboard Kibana
+Vai su → Stack Management > Saved Objects > Import e importa il file "dashboard.ndjson".
+Vai su un terminale e importa i dati delle ricerce
+```sh
+curl -X POST "http://localhost:9200/_bulk" -H "Content-Type: application/x-ndjson" --data-binary @news-topics-index.ndjson
+curl -X POST "http://localhost:9200/_bulk" -H "Content-Type: application/x-ndjson" --data-binary @fake-news-index.ndjson
+curl -X POST "http://localhost:9200/_bulk" -H "Content-Type: application/x-ndjson" --data-binary @news.ndjson     
+```
+
 ## Contribuire
 Fai un fork del progetto, lavora sulle modifiche e invia una pull request!
 
