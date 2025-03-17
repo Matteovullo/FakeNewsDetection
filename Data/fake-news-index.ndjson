@@ -12,3 +12,5 @@
 {"title": "Comet will hit Earth next year", "content": "The Earth is flat.", "fake_news_rating": "False"}
 {"index": {"_index": "fake-news-index", "_id": "Obama is secretly running for president again"}}
 {"title": "Obama is secretly running for president again", "content": "The Earth is flat.", "fake_news_rating": "Unknown"}
+{"index": {"_index": "fake-news-index", "_id": "Moon landing was faked by NASA"}}
+{"title": "Moon landing was faked by NASA", "content": "CNN reported Donald Trump died on Nov. 1.", "fake_news_rating": "Missing Context"}
