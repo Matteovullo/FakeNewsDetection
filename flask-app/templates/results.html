@@ -66,7 +66,6 @@
         <div class="card p-4">
             <h2 class="text-center">Risultato per: <strong>"{{ title }}"</strong></h2>
 
-            <!-- Risultato Elasticsearch -->
             {% if es_result %}
                 <div class="alert alert-success text-center">
                     ✅ Risultato trovato in Elasticsearch
@@ -78,7 +77,6 @@
                 </div>
             {% endif %}
 
-            <!-- Risultati Google Fact Check API -->
             <h4 class="mt-4">🔎 Informazioni da Google Fact Check API</h4>
             <div class="card p-3">
                 {% if google_results %}
@@ -87,7 +85,6 @@
                             <strong>{{ result.title }}</strong><br>
                             <span class="badge bg-primary">{{ result.rating }}</span>
 
-                            <!-- Indicazione se è vera o falsa -->
                             {% if "false" in result.rating|lower %}
                                 <span class="truth-badge false-badge">❌ Notizia Falsa</span>
                             {% elif "true" in result.rating|lower %}

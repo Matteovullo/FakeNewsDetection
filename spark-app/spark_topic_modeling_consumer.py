@@ -9,11 +9,9 @@ from pyspark.ml import Pipeline
 import logging
 from pyspark.sql.types import StructType, StructField, StringType, ArrayType, DoubleType
 
-# Configura il logging
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger("TopicModelingConsumer")
 
-# Crea la sessione Spark
 spark = SparkSession.builder \
     .appName("TopicModelingConsumer") \
     .config("spark.jars.packages",
@@ -30,13 +28,11 @@ spark = SparkSession.builder \
     .config("spark.default.parallelism", "100") \
     .getOrCreate()
 
-# **1️⃣ Definisce lo schema dei dati ricevuti da Kafka**
 schema = StructType([
     StructField("title", StringType(), True),
     StructField("content", StringType(), True)
 ])
 
-# **2️⃣ Legge i dati da Kafka (fact-check-request)**
 df = spark.readStream.format("kafka") \
     .option("kafka.bootstrap.servers", "kafka:9092") \
     .option("subscribe", "fact-check-request") \
@@ -47,13 +43,11 @@ df = df.select(from_json(col("value").cast("string"), schema).alias("data")).sel
 
 df = df.filter(col("content").isNotNull() & (col("content") != ""))
 
-# **Debug: Mostra i dati ricevuti da Kafka**
 df.writeStream \
     .outputMode("append") \
     .format("console") \
     .start()
 
-# **3️⃣ Definisce la pipeline Spark NLP**
 document_assembler = DocumentAssembler().setInputCol("content").setOutputCol("document")
 tokenizer = Tokenizer().setInputCols(["document"]).setOutputCol("tokens")
 normalizer = Normalizer().setInputCols(["tokens"]).setOutputCol("normalized")
@@ -71,11 +65,9 @@ lda = LDA(k=5, maxIter=10, featuresCol="features")
 
 pipeline = Pipeline(stages=[document_assembler, tokenizer, normalizer, stopwords_cleaner, lemmatizer, finisher, ngram, vectorizer, lda])
 
-# **4️⃣ Definisce funzioni di conversione per Elasticsearch**
 convert_array_to_string = udf(lambda arr: ", ".join(arr) if isinstance(arr, list) else "", StringType())
 convert_vector_to_array = udf(lambda vec: vec.toArray().tolist() if vec is not None else [], ArrayType(DoubleType()))
 
-# **5️⃣ Funzione per elaborare i dati in batch**
 def process_batch(batch_df, batch_id):
     if batch_df.isEmpty():
         logger.info(f"⚠️ Nessun dato nel batch {batch_id}, salto il processamento.")
@@ -87,17 +79,13 @@ def process_batch(batch_df, batch_id):
     model = pipeline.fit(batch_df)
     transformed_df = model.transform(batch_df)
 
-    # **Debug: Mostra lo schema del DataFrame trasformato**
     transformed_df.printSchema()
 
-    # **Applica le conversioni per Elasticsearch**
     transformed_df = transformed_df.withColumn("bigrams", convert_array_to_string(col("bigrams")))
     transformed_df = transformed_df.withColumn("topicDistribution", convert_vector_to_array(col("topicDistribution")))
 
-    # **Mantiene solo le colonne necessarie**
     final_df = transformed_df.select("title", "content", "bigrams", "topicDistribution")
 
-    # **Scrive su Elasticsearch (`news-topics-index`)**
     final_df.write \
         .format("org.elasticsearch.spark.sql") \
         .option("es.nodes", "http://elasticsearch:9200") \
@@ -108,7 +96,6 @@ def process_batch(batch_df, batch_id):
 
     logger.info(f"✅ Batch {batch_id} elaborato con successo e scritto su Elasticsearch!")
 
-# **6️⃣ Applica il processing per ogni batch**
 query = df.writeStream \
     .foreachBatch(process_batch) \
     .option("checkpointLocation", "/tmp/spark-checkpoint-news-topics") \

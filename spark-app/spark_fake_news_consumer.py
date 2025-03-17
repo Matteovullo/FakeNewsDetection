@@ -6,11 +6,9 @@ import time
 import logging
 from functools import lru_cache
 
-# Configura il logging
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger("FakeNewsConsumer")
 
-# Crea la sessione Spark con configurazione corretta
 spark = SparkSession.builder \
     .appName("FakeNewsConsumer") \
     .config("spark.jars.packages",
@@ -18,18 +16,16 @@ spark = SparkSession.builder \
             "org.elasticsearch:elasticsearch-spark-30_2.12:8.14.0") \
     .getOrCreate()
 
-# Definisci lo schema dei dati
 schema = StructType([
     StructField("title", StringType(), True),
     StructField("content", StringType(), True)
 ])
 
-# Funzione per controllare le fake news con caching
 @lru_cache(maxsize=1000)
 def check_fake_news(title):
     """Interroga Google Fact Check API per verificare se un titolo è una fake news."""
     api_url = "https://factchecktools.googleapis.com/v1alpha1/claims:search"
-    api_key = "AIzaSyCoUxLPkO4-FQM99eBZhwhJ3L-Gqgsbp7w"  # Chiave API
+    api_key = "AIzaSyCoUxLPkO4-FQM99eBZhwhJ3L-Gqgsbp7w"  
 
     params = {"query": title, "key": api_key}
     try:
@@ -44,23 +40,19 @@ def check_fake_news(title):
         logger.error(f"Request failed: {e}")
     return "Unknown"
 
-# Leggi i dati da Kafka
 df = spark.readStream.format("kafka") \
     .option("kafka.bootstrap.servers", "kafka:9092") \
     .option("subscribe", "fact-check-request") \
     .option("startingOffsets", "latest") \
     .load()
 
-# Deserializza i dati JSON
 json_df = df.select(from_json(col("value").cast("string"), schema).alias("data")).select("data.*")
 
-# Mostra i dati in console per debug
 json_df.writeStream \
     .outputMode("append") \
     .format("console") \
     .start()
 
-# Funzione per processare i batch con scrittura su Elasticsearch
 def process_batch(batch_df, batch_id):
     if batch_df.isEmpty():
         logger.info(f"Nessun dato da processare nel batch {batch_id}")
@@ -68,18 +60,15 @@ def process_batch(batch_df, batch_id):
 
     logger.info(f"📦 Processing batch {batch_id}")
 
-    # Ottieni i titoli unici
     unique_titles = batch_df.select("title").distinct().rdd.map(lambda row: row.title).collect()
     title_ratings = {title: check_fake_news(title) for title in unique_titles}
 
-    # Aggiungi le classificazioni al DataFrame
     def get_rating(title):
         return title_ratings.get(title, "Unknown")
 
     rating_udf = udf(get_rating, StringType())
     batch_df = batch_df.withColumn("fake_news_rating", rating_udf(col("title")))
 
-    # ✅ Scrittura su Elasticsearch con configurazione corretta
     try:
         batch_df.write.format("org.elasticsearch.spark.sql") \
             .option("es.nodes", "http://elasticsearch:9200") \
@@ -93,11 +82,9 @@ def process_batch(batch_df, batch_id):
     except Exception as e:
         logger.error(f"❌ Errore durante la scrittura su Elasticsearch: {e}")
 
-# Avvia lo streaming
 query = json_df.writeStream \
     .foreachBatch(process_batch) \
     .option("checkpointLocation", "/tmp/spark-checkpoint-fake-news") \
     .start()
 
-# Attendi la terminazione dello streaming
 query.awaitTermination()

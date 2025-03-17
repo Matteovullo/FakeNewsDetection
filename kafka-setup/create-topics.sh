@@ -1,9 +1,7 @@
 #!/bin/bash
 
-# Abilita il controllo degli errori
 set -e
 
-# Funzione per controllare ed eventualmente creare un topic
 create_topic() {
     local TOPIC=$1
     echo "Verifica del topic '$TOPIC'..."
@@ -18,7 +16,6 @@ create_topic() {
     fi
 }
 
-# Controlla e crea i topic necessari
 create_topic "fake-news"
 create_topic "news-topics"
 

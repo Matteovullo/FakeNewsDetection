@@ -30,5 +30,10 @@ repository:
 html:
   use_issues_button: true
   use_repository_button: true
-  static_path: ["_static"]
+  use_jupyterbook_latex: true
+  copy_files: true
 
+sphinx:
+  extra_html_static_path:
+    - _static
+    - content/immagini  # Includi la cartella delle immagini

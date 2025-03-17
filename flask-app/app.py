@@ -8,11 +8,9 @@ import requests
 
 app = Flask(__name__)
 
-# Configurazione del logging
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger("FakeNewsApp")
 
-# Configurazione Kafka
 KAFKA_BROKER = "kafka:9092"
 KAFKA_TOPIC = "fact-check-request"
 
@@ -26,7 +24,6 @@ except KafkaError as e:
     logger.error(f"❌ Errore durante la connessione a Kafka: {e}")
     producer = None
 
-# Configurazione Elasticsearch
 try:
     es = Elasticsearch(["http://elasticsearch:9200"])
     if not es.ping():
@@ -36,11 +33,10 @@ except Exception as e:
     logger.error(f"❌ Errore nella connessione a Elasticsearch: {e}")
     es = None
 
-# Funzione per interrogare Google Fact Check API
 def check_fake_news(title):
     """Interroga Google Fact Check API e restituisce un elenco di risultati di fact-checking."""
     api_url = "https://factchecktools.googleapis.com/v1alpha1/claims:search"
-    api_key = "AIzaSyCoUxLPkO4-FQM99eBZhwhJ3L-Gqgsbp7w"  # Sostituisci con una chiave API valida
+    api_key = "AIzaSyCoUxLPkO4-FQM99eBZhwhJ3L-Gqgsbp7w"  
 
     params = {"query": title, "key": api_key}
     try:
@@ -53,16 +49,16 @@ def check_fake_news(title):
                     review = claim.get("claimReview", [{}])[0]
                     fact_checks.append({
                         "title": claim.get("text", "N/A"),
-                        "content": claim.get("text", "N/A"),  # Recupera il contenuto reale
+                        "content": claim.get("text", "N/A"),  
                         "rating": review.get("textualRating", "Unknown"),
                         "source": review.get("publisher", {}).get("name", "Unknown Source"),
                         "url": review.get("url", "#"),
                     })
-                return fact_checks  # Restituisce un elenco di verifiche
+                return fact_checks  
     except requests.exceptions.RequestException as e:
         logger.error(f"❌ Errore nella richiesta a Google Fact Check API: {e}")
 
-    return []  # Ritorna un elenco vuoto se non trova nulla
+    return [] 
 
 @app.route("/")
 def home():
@@ -77,7 +73,6 @@ def verify():
     if not title:
         return jsonify({"error": "Il titolo è obbligatorio"}), 400
 
-    # 🔍 1️⃣ Prova a recuperare il contenuto reale da Elasticsearch
     content = None
 
     if es:
@@ -90,16 +85,14 @@ def verify():
         except Exception as e:
             logger.error(f"❌ Errore durante la ricerca su Elasticsearch: {e}")
 
-    # 🧐 2️⃣ Se Elasticsearch non ha il contenuto, prova con Google Fact Check API
     if not content:
         google_results = check_fake_news(title)
         if google_results:
-            content = google_results[0]["content"]  # Prende il primo risultato disponibile
+            content = google_results[0]["content"]  
             logger.info(f"🔎 Contenuto trovato su Google Fact Check API: {content}")
 
-    # 🛑 3️⃣ Se ancora non trova nulla, assegna un messaggio di fallback
     if not content:
-        content = f"⚠ Nessun contenuto disponibile per '{title}'."  # Messaggio di default
+        content = f"⚠ Nessun contenuto disponibile per '{title}'."  
 
     if not producer:
         return jsonify({"error": "Kafka non è disponibile"}), 500
@@ -123,7 +116,6 @@ def results():
     if not title:
         return jsonify({"error": "Il titolo è obbligatorio"}), 400
 
-    # Prima prova a recuperare i dati da Elasticsearch
     es_result = None
 
     if es:
@@ -136,7 +128,6 @@ def results():
         except Exception as e:
             logger.error(f"❌ Errore durante la ricerca su Elasticsearch: {e}")
 
-    # Se Elasticsearch non ha dati, interroga Google Fact Check API
     google_fact_check_results = check_fake_news(title)
 
     return render_template("results.html", title=title, es_result=es_result, google_results=google_fact_check_results)
