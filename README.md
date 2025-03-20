@@ -61,8 +61,7 @@ Vai su → Stack Management > Saved Objects > Import e importa il file "dashboar
 Vai su un terminale e importa i dati delle ricerce
 ```sh
 curl -X POST "http://localhost:9200/_bulk" -H "Content-Type: application/x-ndjson" --data-binary @news-topics-index.ndjson
-curl -X POST "http://localhost:9200/_bulk" -H "Content-Type: application/x-ndjson" --data-binary @fake-news-index.ndjson
-curl -X POST "http://localhost:9200/_bulk" -H "Content-Type: application/x-ndjson" --data-binary @news.ndjson     
+curl -X POST "http://localhost:9200/_bulk" -H "Content-Type: application/x-ndjson" --data-binary @fake-news-index.ndjson 
 ```
 
 ## Contribuire
